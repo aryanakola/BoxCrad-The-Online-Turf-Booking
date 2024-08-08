@@ -1,0 +1,118 @@
+db.owner.insertOne({
+    name:"Aryan Akola",
+    mobileNumber:7383738783,
+    ownedBox:[]
+});
+
+db.boxCricket.insertOne({
+    ownerId: ObjectId(''),
+    name: "Radhe",
+    phoneNumber: 9876543210,
+    address:{
+        street: "xxx",
+        locality: "xxxx",
+        road: "xxxx",
+        city: "xxx",
+        taluka: "xxx",
+        district: "xxxx",
+        state: "xxxx",
+        pincode: "xxxx", 
+    },
+    addressLink:"link of the add. from gMaps",
+    turfs:[{
+        turfId: ObjectId(),
+        turfName: "xxx",
+        dimension: 
+        {
+            length: xxx,
+            breadth: xxx,
+            height: xxx,
+        }
+        price: xxxx,
+        playerCapacity: xxx,
+        photos:[],
+        typeOfTurf: "xxx"
+    },
+    {
+        turfId: ObjectId(),
+        turfName: "xxx",
+        dimension: 
+        {
+            length: xxx,
+            breadth: xxx,
+            height: xxx,
+        }
+        price: xxxx,
+        playerCapacity: xxx,
+        photos:[],
+        typeOfTurf: "xxx"
+    },
+    {
+        turfId: ObjectId(),
+        turfName: "xxx",
+        dimension: 
+        {
+            length: xxx,
+            breadth: xxx,
+            height: xxx,
+        }
+        price: xxxx,
+        playerCapacity: xxx,
+        photos:[],
+        typeOfTurf: "xxx"
+    }],
+    timeAndHoliday:{
+        mTof:"",
+        saturday:"",
+        sunday:"",
+    }
+})
+
+db.bookings.insertOne({
+    playerID: ObjectId(''),
+    boxCricketId: ObjectId(''),
+    bookingDate: "xxx",
+    totalPaid: xxx,
+    Bookings:[
+    {
+        turfId: ObjectId(''),
+        reservationDate: "xxx",//iso date something
+        timingFrom: "xxxx",
+        timingTo: "xxxx",
+        duration: xxxx,
+        pricePerHour : xxx,
+        pricePaid :xxx,
+        
+    },
+    {
+        turfId: ObjectId(''),
+        reservationDate: "xxx",//iso date something
+        timingFrom: "xxxx",
+        timingTo: "xxxx",
+        duration: xxxx,
+        pricePerHour : xxx,
+        pricePaid :xxx,
+    },
+    {
+        turfId: ObjectId(''),
+        reservationDate: "xxx",//iso date something
+        timingFrom: "xxxx",
+        timingTo: "xxxx",
+        duration: xxxx,
+        pricePerHour : xxx,
+        pricePaid :xxx,
+    }]
+});
+
+db.player.insertOne({
+    pName:"Dhruvil Dhamasaniya",
+    pMobileNumber:9876453210,
+});
+
+db.reviewAndRatting.insertOne({
+    boxCricketId: ObjectId(''),
+    playerId: ObjectId(''),
+    ratting:xxx,
+    review:"",
+    timeStampOfReview:"",
+});
