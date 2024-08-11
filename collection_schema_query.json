@@ -24,11 +24,11 @@ db.boxCricket.insertOne({
         turfName: "xxx",
         dimension: 
         {
-            length: xxx,
-            breadth: xxx,
-            height: xxx,
+            length: "xxx",
+            breadth: "xxx",
+            height: "xxx",
         }
-        price: xxxx,
+        pricePerHour: xxxx,
         playerCapacity: xxx,
         photos:[],
         typeOfTurf: "xxx"
@@ -38,11 +38,11 @@ db.boxCricket.insertOne({
         turfName: "xxx",
         dimension: 
         {
-            length: xxx,
-            breadth: xxx,
-            height: xxx,
+            length: "xxx",
+            breadth: "xxx",
+            height: "xxx",
         }
-        price: xxxx,
+        pricePerHour: xxxx,
         playerCapacity: xxx,
         photos:[],
         typeOfTurf: "xxx"
@@ -52,11 +52,11 @@ db.boxCricket.insertOne({
         turfName: "xxx",
         dimension: 
         {
-            length: xxx,
-            breadth: xxx,
-            height: xxx,
+            length: "xxx",
+            breadth: "xxx",
+            height: "xxx",
         }
-        price: xxxx,
+        pricePerHour: xxxx,
         playerCapacity: xxx,
         photos:[],
         typeOfTurf: "xxx"

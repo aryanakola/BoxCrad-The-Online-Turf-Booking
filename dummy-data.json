@@ -1,0 +1,238 @@
+//Insert owner on signup
+
+db.owner.insertMany([
+    {
+        name:"Aryan Akola",
+        mobileNumber:7383738783,
+        ownedBox:[]
+    },
+    {
+        name:"Dhruvil Dhamasaniya",
+        mobileNumber:9876543210,
+        ownedBox:[]
+    },
+    {
+        name:"Hitarth Buvariya",
+        mobileNumber:9876512340,
+        ownedBox:[]
+    }
+]);
+
+//2. Insert player on signup
+
+db.player.insertMany([
+    {
+        pName:"Arpit Faldu",
+        pMobileNumber:9872353210,
+    },
+    {
+        pName:"Vasu Vekariya",
+        pMobileNumber:9876883210,
+    },
+    {
+        pName:"Smeet Haraniya",
+        pMobileNumber:9876454410,
+    }
+]);
+
+//3. Insert BoxCricket after entering the website respectively
+
+//aryan
+db.boxCricket.insertOne({
+    ownerId: ObjectId('66b8e11179734be1d508317f'),
+    name: "Radhe Box Cricket",
+    phoneNumber: 7383738783,
+    address:{
+        street: "A-7",
+        locality: "Umiya Park",
+        road: "New 150ft Ring Road",
+        city: "Rajkot",
+        taluka: "Rajkot",
+        district: "Rajkot",
+        state: "Gujarat",
+        pincode: "360005", 
+    },
+    addressLink:"link of the add. from gMaps",
+    turfs:[{
+        turfId: ObjectId(),
+        turfName: "King-1",
+        dimension: 
+        {
+            length: "50 mtr",
+            breadth: "30 mtr",
+            height: "20 ft",
+        },
+        pricePerHour: 2000,
+        playerCapacity: 16,
+        photos:[],
+        typeOfTurf: "Cricket"
+    }],
+    timeAndHoliday:{
+        mTof:"8:00 to 23:00",
+        saturday:"6:00 to 2:00",
+        sunday:"6:00 to 2:00",
+    },
+});
+
+// dhruvil
+db.boxCricket.insertOne({
+    ownerId: ObjectId('66b8e11179734be1d5083180'),
+    name: "Mahadev Box Cricket",
+    phoneNumber: 9876543210,
+    address:{
+        street: "A-10",
+        locality: "Umiya Park",
+        road: "New 150ft Ring Road",
+        city: "Rajkot",
+        taluka: "Rajkot",
+        district: "Rajkot",
+        state: "Gujarat",
+        pincode: "360005", 
+    },
+    addressLink:"link of the add. from gMaps",
+    turfs:[{
+        turfId: ObjectId(),
+        turfName: "Master",
+        dimension: 
+        {
+            length: "50 mtr",
+            breadth: "30 mtr",
+            height: "20 ft",
+        },
+        pricePerHour: 2000,
+        playerCapacity: 16,
+        photos:[],
+        typeOfTurf: "Cricket"
+    }],
+    timeAndHoliday:{
+        mTof:"8:00 to 23:00",
+        saturday:"6:00 to 2:00",
+        sunday:"6:00 to 2:00",
+    }
+});
+
+// hitarth
+db.boxCricket.insertOne({
+    ownerId: ObjectId('66b8e11179734be1d5083181'),
+    name: "Shri Ganesh Box Cricket",
+    phoneNumber: 9876512340,
+    address:{
+        street: "A-17",
+        locality: "Umiya Park",
+        road: "New 150ft Ring Road",
+        city: "Rajkot",
+        taluka: "Rajkot",
+        district: "Rajkot",
+        state: "Gujarat",
+        pincode: "360005", 
+    },
+    addressLink:"link of the add. from gMaps",
+    turfs:[{
+        turfId: ObjectId(),
+        turfName: "Apex",
+        dimension: 
+        {
+            length: "50 mtr",
+            breadth: "30 mtr",
+            height: "20 ft",
+        },
+        pricePerHour: 2000,
+        playerCapacity: 16,
+        photos:[],
+        typeOfTurf: "Cricket"
+    }],
+    timeAndHoliday:{
+        mTof:"8:00 to 23:00",
+        saturday:"6:00 to 2:00",
+        sunday:"6:00 to 2:00",
+    }
+});
+
+//4. Inserting BoxCricket bookings record
+// aryan -> arpit
+db.bookings.insertOne({
+    playerID: ObjectId('66b8e4e179734be1d5083182'),
+    boxCricketId: ObjectId('66b8ec5a79734be1d5083186'),
+    bookingDate: "10-08-2024",
+    totalPaid: 4000,
+    Bookings:[
+    {
+        turfId: ObjectId('66b8ec5a79734be1d5083185'),
+        reservationDate: "11-08-2024",//iso date something
+        timingFrom: "20:00",
+        timingTo: "22:00",
+        duration: 2,
+        pricePerHour : 2000,
+        pricePaid :4000,
+        
+    }]
+});
+
+// dhruvil -> vasu
+db.bookings.insertOne({
+    playerID: ObjectId('66b8e4e179734be1d5083183'),
+    boxCricketId: ObjectId('66b8ecf579734be1d5083188'),
+    bookingDate: "10-08-2024",
+    totalPaid: 4000,
+    Bookings:[
+    {
+        turfId: ObjectId('66b8ecf579734be1d5083187'),
+        reservationDate: "11-08-2024",//iso date something
+        timingFrom: "20:00",
+        timingTo: "22:00",
+        duration: 2,
+        pricePerHour : 2000,
+        pricePaid :4000,
+        
+    }]
+});
+
+// hitarth -> smeet
+db.bookings.insertOne({
+    playerID: ObjectId('66b8e4e179734be1d5083184'),
+    boxCricketId: ObjectId('66b8ed0479734be1d508318a'),
+    bookingDate: "10-08-2024",
+    totalPaid: 4000,
+    Bookings:[
+    {
+        turfId: ObjectId('66b8ed0479734be1d5083189'),
+        reservationDate: "11-08-2024",//iso date something
+        timingFrom: "20:00",
+        timingTo: "22:00",
+        duration: 2,
+        pricePerHour : 2000,
+        pricePaid :4000,
+        
+    }]
+});
+
+//5. Inserting into Review and rating
+
+//aryan->arpit
+db.reviewAndRatting.insertOne({
+    boxCricketId: ObjectId('66b8ec5a79734be1d5083186'),
+    playerId: ObjectId('66b8e4e179734be1d5083182'),
+    ratting:10,
+    review:"Very Good Ground and very Well maintained",
+    timeStampOfReview:"11-08-2024;23:00:00",
+});
+
+// dhruvil -> vasu
+db.reviewAndRatting.insertOne({
+    boxCricketId: ObjectId('66b8ecf579734be1d5083188'),
+    playerId: ObjectId('66b8e4e179734be1d5083183'),
+    ratting:10,
+    review:"Very Good Ground and very Well maintained and very nice facility",
+    timeStampOfReview:"11-08-2024;23:01:23",
+});
+
+// hitarth -> smeet
+db.reviewAndRatting.insertOne({
+    boxCricketId: ObjectId('66b8ed0479734be1d508318a'),
+    playerId: ObjectId('66b8e4e179734be1d5083184'),
+    ratting:10,
+    review:"Very Good Ground and very Well maintained and very nice facility",
+    timeStampOfReview:"11-08-2024;23:31:23",
+});
+
+
